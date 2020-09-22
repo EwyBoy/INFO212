@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Covid Tracker</title>
+        <script src="js/page-controller.js" type="application/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/font.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css">
+    </head>
+    <body onload="init()">
+        <center>
+            <br>
+            <img src="assets/logo.png" height="185" width="185"/>
+
+            <div id="page01">
+                <h1 class="subliner">Velkommen</h1>
+                <p style="margin: 5%">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum dolor ac nisl porttitor, sit amet faucibus magna varius. Nulla et ex at augue dignissim faucibus nec non nunc. Suspendisse varius pretium risus, et auctor lorem euismod ac.
+                </p>
+                <button onclick="pageChanger(1)" class="button is-danger is-rounded">Kom i gang!</button>
+            </div>
+
+            <div id="page02" style="display: none">
+                <h1 class="subliner">Fortell oss hvem du er</h1>
+
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent is-info">
+                        <article class="tile is-child notification is-info">
+                            <p class="title">Privatperson</p>
+                            <div class="content">
+                                <button class="button is-info is-inverted is-large is-rounded" onclick="pageChanger(2)">
+                                <span class="icon is-small">
+                                  <i class="fas fa-user"></i>
+                                </span>
+                                    <span>Bruker</span>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="tile is-parent is-danger">
+                        <article class="tile is-child notification is-danger">
+                            <p class="title">Bedrift</p>
+                            <div class="content">
+                                <button class="button is-danger is-inverted is-large is-rounded" onclick="pageChanger(2)">
+                                  <span class="icon is-small">
+                                      <i class="fas fa-building"></i>
+                                  </span>
+                                    <span>Bedrift</span>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page03" style="display: none">
+                <h1 class="subliner">Registrering</h1>
+
+                <h1 class="textliner">Hvem er du?</h1>
+
+                <div style="margin: 0 20% 5%;">
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="Navn">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="Adresse">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control is-expanded has-icons-left has-icons-right">
+                                    <input class="input" type="text" placeholder="By">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-city"></i>
+                                    </span>
+                                    <span class="icon is-small is-right">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <p class="control is-expanded has-icons-left has-icons-right">
+                                    <input class="input" type="text" placeholder="Postnr">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </span>
+                                    <span class="icon is-small is-right">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="textliner" style="margin-top: 5%">Hvor kan vi kontakte deg?</h1>
+                    <div class="field is-horizontal">
+                        <div class="field-body">
+                            <div class="field is-expanded">
+                                <div class="field has-addons">
+                                    <p class="control">
+                                        <a class="button is-static">+47</a>
+                                    </p>
+                                    <p class="control is-expanded has-icons-right">
+                                        <input class="input" type="tel" placeholder="Mobil">
+                                        <span class="icon is-small is-right">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="email" placeholder="Email">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <button type="button" class="button is-large is-rounded is-info">Lagre Info</button>
+
+            </div>
+
+            <div style="margin-top: 5%" id="page-tracker"></div>
+
+        </center>
+    </body>
+</html>

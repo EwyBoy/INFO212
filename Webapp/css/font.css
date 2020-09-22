@@ -1,0 +1,31 @@
+.headliner {
+    font-family: 'simplificasimplifica', Arial, sans-serif;
+    font-weight:normal;
+    font-size: 100px;
+    font-style:normal;
+}
+.subliner {
+    font-family: 'simplificasimplifica', Arial, sans-serif;
+    font-weight:normal;
+    font-size: 60px;
+    font-style:normal;
+}
+
+.textliner {
+    font-family: 'simplificasimplifica', Arial, sans-serif;
+    font-weight:normal;
+    font-size: 28px;
+    font-style:normal;
+}
+
+.link a {
+    color: #00d1b2;
+}
+
+@font-face {
+    font-family: 'simplificasimplifica';
+    src: url('../font/simplifica_typeface-webfont.woff2') format('woff2'),
+    url('../font/simplifica_typeface-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
