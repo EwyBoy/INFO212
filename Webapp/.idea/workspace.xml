@@ -20,6 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dbff4c3-ffcc-4362-8a16-6c56671a8cfe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/database.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/database.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/database.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/database.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/database_mysql.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/database_sqlite.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +37,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -49,7 +56,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -62,12 +69,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Eivind\Documents\Skole\INFO212\Webapp\database" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Eivind\Documents\Skole\INFO212\Webapp\database" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/font" />
       <recent name="$PROJECT_DIR$/assets" />
-      <recent name="$PROJECT_DIR$/html" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -81,6 +91,7 @@
       <workItem from="1600260422776" duration="30774000" />
       <workItem from="1600360617854" duration="2643000" />
       <workItem from="1603133358266" duration="1735000" />
+      <workItem from="1603182384639" duration="2243000" />
     </task>
     <servers />
   </component>
@@ -97,6 +108,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="453" y="234" key="#Node.js_and_NPM" timestamp="1600359634180">
