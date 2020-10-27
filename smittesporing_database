@@ -1,0 +1,80 @@
+create table Person(
+Id Integer not null,
+Email varchar2(50),
+Phone varchar2(15),
+Firstname varchar2(25) not null,
+Lastname varchar2(25) not null,
+primary key (id));
+
+create table type_of_location(
+Type varchar2(25) not null,
+primary key(Type));
+
+
+create table Place(
+Id integer not null,
+Name varchar2(25) not null,
+Description varchar2(50),
+Type varchar2(25) not null,
+primary key(id),
+foreign key Type references type_of_location);
+
+create table Visit(
+Person Integer not null,
+Place Integer not null,
+Arrived timestamp not null,
+left timestamp not null,
+primary key (Person, Place, Arrived),
+foreign key Person references Person,
+foreign key Place references Place
+);
+
+insert into type_of_location values('Bar');
+insert into type_of_location values('Restaurant');
+insert into type_of_location values('Cinema');
+insert into type_of_location values('Lecture hall');
+insert into type_of_location values('Flat');
+insert into type_of_location values('Public transport');
+
+insert into Place (Id, Name, Description, Type) values (1, 'Diskuterbar', 'Sv studentenes favorittsted', 'Bar');
+insert into Place (Id, Name, Description, Type) values (2, 'Egget', null, 'Lecture hall');
+insert into Place (Id, Name, Description, Type) values (3, 'Bybanen vogn1', null, 'Public transport');
+
+Insert into Person (Id, Email, Phone, Firstname, Lastname) values(1, 'donald@disney.com', '001 123 12345 678', 'Donald', 'Duck');
+Insert into Person (Id, Email, Phone, Firstname, Lastname) values(2, 'dolly@disney.com', '001 123 12345 679', 'Dolly', 'Duck');
+Insert into Person (Id, Email, Phone, Firstname, Lastname) values(3, 'mickey@disney.com', '001 123 12345 680', 'Mickey', 'Mouse');
+
+insert into visit(Person, Place, Arrived, left) values(1, 1, to_timestamp('25.10.2020 20:25', 'DD.MM.YYYY H24:MI'), to_timestamp('25.10.2020 20:50', 'DD.MM.YYYY H24:MI'));
+insert into visit(Person, Place, Arrived, left) values(2, 1, to_timestamp('25.10.2020 20:40', 'DD.MM.YYYY H24:MI'), to_timestamp('25.10.2020 22:50', 'DD.MM.YYYY H24:MI'));
+insert into visit(Person, Place, Arrived, left) values(3, 1, to_timestamp('25.10.2020 21:25', 'DD.MM.YYYY H24:MI'), to_timestamp('25.10.2020 23:50', 'DD.MM.YYYY H24:MI'));
+
+--Alle som har på sted en etter et tidspunkt.
+select p1.Firstname, p1.Lastname, place.name, v1.arrived, v1.left
+from visit v1, place, person p1
+where place.id = v1.place
+and p1.id = v1.Person
+and v1.place = '1'
+and v1.arrived > to_timestamp('25.10.2020 20:40', 'DD.MM.YYYY H24:MI');
+
+--Alle som har vært samtidig på sted en etter et tidspunkt.
+select p1.Firstname, p1.Lastname, p2.Firstname, p2.Lastname, place.name, max(v1.arrived, v2.arrived), min(v1.left, v2.left)
+from visit v1, visit v2, place, person p1, person p2
+where v1.place = v2.Place
+and v1.arrived <= v2.Arrived
+and v1.left >= v2.arrived
+and place.id = v1.place
+and p1.id = v1.Person
+and p2.id = v2.person
+and v1.place = '1'
+and v1.arrived > to_timestamp('25.10.2020 20:40', 'DD.MM.YYYY H24:MI');
+
+--Alle som har vært sammen med Donald på sted etter et tidspunkt.
+select p1.Firstname, p1.Lastname, place.name, max(v1.arrived, v2.arrived), min(v1.left, v2.left)
+from visit v1, visit v2, place, person p1
+where v1.place = v2.Place
+and v1.arrived <= v2.Left
+and v1.left >= v2.arrived
+and place.id = v1.place
+and p1.id = v1.Person
+and v2.person = '1' --Donald
+and v1.arrived > to_timestamp('25.10.2020 20:40', 'DD.MM.YYYY H24:MI') --Når Donald ble smittet;
