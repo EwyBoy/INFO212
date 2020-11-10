@@ -20,15 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dbff4c3-ffcc-4362-8a16-6c56671a8cfe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Database/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Database/.idea/Database.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Database/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Database/.idea/hotswap_agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Database/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Database/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Database/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Database/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/page-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/page-controller.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +89,8 @@
       <workItem from="1603133358266" duration="1735000" />
       <workItem from="1603182384639" duration="2965000" />
       <workItem from="1603187535310" duration="641000" />
+      <workItem from="1604395006729" duration="3149000" />
+      <workItem from="1605002455230" duration="96000" />
     </task>
     <servers />
   </component>
@@ -122,9 +118,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1600275729128" />
-    <state x="2582" y="330" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603134502482">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="662" y="330" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604398123397">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="662" y="330" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604398123397" />
     <state x="2582" y="330" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603134502482" />
     <state x="458" y="215" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600262427746">
       <screen x="0" y="23" width="1440" height="877" />

@@ -25,6 +25,7 @@ function pageChanger(id) {
 
 // Toggles the page content
 function toggleShow(hide, show) {
+
     console.log(hide);
 
     if (hide.style.display === "none") {
